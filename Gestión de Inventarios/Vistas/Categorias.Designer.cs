@@ -1,4 +1,5 @@
-﻿namespace Gestión_de_Inventarios
+﻿
+namespace Gestión_de_Inventarios
 {
     partial class Categorias
     {
@@ -32,11 +33,12 @@
             label2 = new Label();
             txtNombreCategoria = new TextBox();
             btnAgregarCategoria = new Button();
-            btnEditarCategoria = new Button();
+            btnEditarGuardar = new Button();
             btnEliminarCategoria = new Button();
             dgvCategorias = new DataGridView();
-            idCategoria = new DataGridViewTextBoxColumn();
-            categoria = new DataGridViewTextBoxColumn();
+            btnCancelar = new Button();
+            Id = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
@@ -44,9 +46,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label1.Location = new Point(157, 23);
+            label1.Location = new Point(179, 31);
             label1.Name = "label1";
-            label1.Size = new Size(264, 32);
+            label1.Size = new Size(326, 41);
             label1.TabIndex = 0;
             label1.Text = "Gestión de Categorías";
             // 
@@ -54,85 +56,119 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(125, 85);
+            label2.Location = new Point(143, 113);
             label2.Name = "label2";
-            label2.Size = new Size(139, 21);
+            label2.Size = new Size(176, 28);
             label2.TabIndex = 1;
             label2.Text = "Nombre categoría:";
             // 
             // txtNombreCategoria
             // 
-            txtNombreCategoria.Location = new Point(270, 85);
+            txtNombreCategoria.Location = new Point(309, 113);
+            txtNombreCategoria.Margin = new Padding(3, 4, 3, 4);
             txtNombreCategoria.Name = "txtNombreCategoria";
-            txtNombreCategoria.Size = new Size(152, 23);
+            txtNombreCategoria.Size = new Size(173, 27);
             txtNombreCategoria.TabIndex = 2;
             // 
             // btnAgregarCategoria
             // 
             btnAgregarCategoria.AutoSize = true;
             btnAgregarCategoria.Font = new Font("Segoe UI", 12F);
-            btnAgregarCategoria.Location = new Point(137, 140);
+            btnAgregarCategoria.Location = new Point(130, 185);
+            btnAgregarCategoria.Margin = new Padding(3, 4, 3, 4);
             btnAgregarCategoria.Name = "btnAgregarCategoria";
-            btnAgregarCategoria.Size = new Size(76, 31);
+            btnAgregarCategoria.Size = new Size(93, 41);
             btnAgregarCategoria.TabIndex = 3;
             btnAgregarCategoria.Text = "Agregar";
             btnAgregarCategoria.UseVisualStyleBackColor = true;
+            btnAgregarCategoria.Click += btnAgregarCategoria_Click;
             // 
-            // btnEditarCategoria
+            // btnEditarGuardar
             // 
-            btnEditarCategoria.AutoSize = true;
-            btnEditarCategoria.Font = new Font("Segoe UI", 12F);
-            btnEditarCategoria.Location = new Point(241, 140);
-            btnEditarCategoria.Name = "btnEditarCategoria";
-            btnEditarCategoria.Size = new Size(75, 31);
-            btnEditarCategoria.TabIndex = 4;
-            btnEditarCategoria.Text = "Editar";
-            btnEditarCategoria.UseVisualStyleBackColor = true;
+            btnEditarGuardar.AutoSize = true;
+            btnEditarGuardar.Font = new Font("Segoe UI", 12F);
+            btnEditarGuardar.Location = new Point(327, 185);
+            btnEditarGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnEditarGuardar.Name = "btnEditarGuardar";
+            btnEditarGuardar.Size = new Size(151, 41);
+            btnEditarGuardar.TabIndex = 4;
+            btnEditarGuardar.Text = "Editar";
+            btnEditarGuardar.UseVisualStyleBackColor = true;
+            btnEditarGuardar.Click += btnEditarGuardar_Click;
             // 
             // btnEliminarCategoria
             // 
             btnEliminarCategoria.AutoSize = true;
             btnEliminarCategoria.Font = new Font("Segoe UI", 12F);
-            btnEliminarCategoria.Location = new Point(346, 140);
+            btnEliminarCategoria.Location = new Point(229, 185);
+            btnEliminarCategoria.Margin = new Padding(3, 4, 3, 4);
             btnEliminarCategoria.Name = "btnEliminarCategoria";
-            btnEliminarCategoria.Size = new Size(77, 31);
+            btnEliminarCategoria.Size = new Size(92, 41);
             btnEliminarCategoria.TabIndex = 5;
             btnEliminarCategoria.Text = "Eliminar";
             btnEliminarCategoria.UseVisualStyleBackColor = true;
+            btnEliminarCategoria.Click += btnEliminarCategoria_Click;
             // 
             // dgvCategorias
             // 
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { idCategoria, categoria });
-            dgvCategorias.Location = new Point(54, 207);
+            dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { Id, Nombre });
+            dgvCategorias.Location = new Point(62, 276);
+            dgvCategorias.Margin = new Padding(3, 4, 3, 4);
             dgvCategorias.Name = "dgvCategorias";
-            dgvCategorias.Size = new Size(451, 342);
+            dgvCategorias.ReadOnly = true;
+            dgvCategorias.RowHeadersWidth = 51;
+            dgvCategorias.Size = new Size(515, 456);
             dgvCategorias.TabIndex = 6;
             // 
-            // idCategoria
+            // btnCancelar
             // 
-            idCategoria.HeaderText = "ID";
-            idCategoria.Name = "idCategoria";
+            btnCancelar.AutoSize = true;
+            btnCancelar.Font = new Font("Segoe UI", 12F);
+            btnCancelar.Location = new Point(484, 185);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(96, 41);
+            btnCancelar.TabIndex = 7;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Visible = false;
             // 
-            // categoria
+            // Id
             // 
-            categoria.HeaderText = "Categoría";
-            categoria.Name = "categoria";
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "ID";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Width = 125;
+            // 
+            // Nombre
+            // 
+            Nombre.DataPropertyName = "Nombre";
+            Nombre.HeaderText = "Categoría";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Width = 125;
             // 
             // Categorias
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(561, 600);
+            ClientSize = new Size(641, 800);
+            Controls.Add(btnCancelar);
             Controls.Add(dgvCategorias);
             Controls.Add(btnEliminarCategoria);
-            Controls.Add(btnEditarCategoria);
+            Controls.Add(btnEditarGuardar);
             Controls.Add(btnAgregarCategoria);
             Controls.Add(txtNombreCategoria);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Categorias";
             Text = "Categorias";
+            Load += Categorias_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -144,10 +180,11 @@
         private Label label2;
         private TextBox txtNombreCategoria;
         private Button btnAgregarCategoria;
-        private Button btnEditarCategoria;
+        private Button btnEditarGuardar;
         private Button btnEliminarCategoria;
         private DataGridView dgvCategorias;
-        private DataGridViewTextBoxColumn idCategoria;
-        private DataGridViewTextBoxColumn categoria;
+        private Button btnCancelar;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nombre;
     }
 }

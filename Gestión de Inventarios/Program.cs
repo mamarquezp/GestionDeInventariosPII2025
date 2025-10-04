@@ -11,7 +11,8 @@ namespace Gestión_de_Inventarios
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Menu_Principal());
+            Dashboard formDashboard = new Dashboard(); // para mandar a llamar la pantalla principal
+            formDashboard.ShowDialog();
         }
     }
 }
