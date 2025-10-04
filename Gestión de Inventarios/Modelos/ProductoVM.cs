@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Gestión_de_Inventarios.Modelos
 {
-    // para que permita gestionar las modificaciones del grid
+    /* Este es un ViewModel y sirve para que permita gestionar las modificaciones del grid, 
+    pues a diferencia de los objetos del LINQ esta si permite editarlos, también ofrece una
+    mejor visibilidad al mostrar la propiedad de nombre de Categoría en lugar de su ID */
     public class ProductoVM
     {
         public int ID { get; set; }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gestión_de_Inventarios.Modelos
 {
+    /* Estructura para el objeto Movimiento, cada vez que ingresa o sale producto, se crea un
+    objeto de estos para guardar el historial */
     public class Movimiento
     {
         public int Id { get; set; }

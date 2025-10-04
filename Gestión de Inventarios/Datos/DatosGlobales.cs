@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Gestión_de_Inventarios.Datos
 {
+
+// Esta clase actúa como Base de Datos
     public static class DatosGlobales
     {
         // Listas para almacenar todos los datos de la aplicación

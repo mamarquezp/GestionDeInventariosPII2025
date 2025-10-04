@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gestión_de_Inventarios.Modelos
 {
+    /* Estructura para el objeto Categoría, contiene las 2 propiedades básicas que definen la
+    categoría de productos en este sistema */
     public class Categoria
     {
         public int Id { get; set; }

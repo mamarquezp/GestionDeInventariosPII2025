@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gestión_de_Inventarios.Modelos
 {
+    // Estructura para el objeto Producto, define las propiedades esenciales de un producto
+    
     public class Producto
     {
         public int Id { get; set; }
